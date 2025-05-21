@@ -39,7 +39,7 @@ namespace ChatServer.Services
                     return;
                 }
 
-                Console.WriteLine($"Client connected. Name: " + request.Name);
+                Console.WriteLine($"Client connected. Name: {request.Name}");
                 await Task.Delay(-1, client.CancellationSource.Token);       
             }
             catch (TaskCanceledException)
@@ -55,7 +55,7 @@ namespace ChatServer.Services
                 if(_clients.TryRemove(clientKey, out var client))
                 {
                     client.Dispose();
-                    Console.WriteLine($"Client disconnected. Name: " + request.Name);                    
+                    Console.WriteLine($"Client disconnected. Name: {request.Name}");                    
                 }                
             }
         }
