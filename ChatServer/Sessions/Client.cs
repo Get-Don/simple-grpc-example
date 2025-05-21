@@ -1,7 +1,7 @@
 ﻿using Chat;
 using Grpc.Core;
 
-namespace ChatServer.Managers;
+namespace ChatServer.Sessions;
 
 class Client : IDisposable
 {
